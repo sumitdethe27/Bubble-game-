@@ -68,7 +68,7 @@ justify-content: space-around;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 14px;
+    gap: 35px;
     padding: 20px;
     height: calc(100% - 80px);
     width: 100%;

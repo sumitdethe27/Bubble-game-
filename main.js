@@ -1,10 +1,11 @@
 let box=document.querySelector(".panel-2")
 
-let score=0;
+
 function rand(min,max){
     return Math.floor(Math.random()*(max-min)+min)
 }
 function fill(){
+    
     let clutter="";
 for(let a=0;a<150;a++){
     let num=rand(0,10);
@@ -14,12 +15,33 @@ for(let a=0;a<150;a++){
 }
 
 
-let content=document.querySelectorAll(".box")
-content.forEach((item)=>{
-    item.addEventListener("click",()=>{
-        score+= +item.textContent
-        console.log(score)
-    })
-})
+
 fill();
-document.querySelector(".btn").addEventListener("click",fill)
+
+function box_loop(){
+    let content=document.querySelectorAll(".box");
+    score=0;
+    content.forEach((item)=>{
+        item.addEventListener("click",()=>{
+            score+= +item.textContent
+            item.textContent=""
+            score_card.textContent=score
+            
+        })
+    });
+    }
+
+document.querySelector(".btn").addEventListener("click",()=>{
+    fill();
+    time=5
+    console.log("done")
+    intervals=setInterval(ticker,1000);
+    score_card.textContent="0";
+box_loop();
+})
+
+let score_card=document.querySelector("#score");
+let hi_score=document.querySelector("#high-score");
+
+let score=0;
+box_loop()
