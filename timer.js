@@ -1,4 +1,4 @@
-let time =20;
+let time =21;
 let timer=document.querySelector("#timer");
 function gameover(){
     box.innerHTML="";
@@ -15,11 +15,11 @@ function ticker(){
             }
             clearInterval(intervals);
         }else{
-        timer.textContent=time
             time--;
+        timer.textContent=time
             
         }
 }
-let intervals=setInterval(ticker,1000);
+var intervals=setInterval(ticker,1000);
 
 

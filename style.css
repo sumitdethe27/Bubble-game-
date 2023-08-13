@@ -69,6 +69,7 @@ justify-content: space-between;
     align-items: center;
     gap: 35px;
     padding: 20px;
+    overflow: hidden;
     height: calc(100% - 80px);
     width: 100%;
     background-color: rgb(231, 214, 182);
@@ -95,9 +96,9 @@ justify-content: space-between;
     font-weight: 600;
 }
 @media (max-width:500px)  {
+    
     .panel-1{
         flex-wrap: wrap;
-        justify-content: center;
          padding: 5px;
         height: auto;
     }
@@ -105,6 +106,7 @@ justify-content: space-between;
     .card{
         height: 20px;
         width: 20px;
+        margin: 3px;
         font-size: 15px;
         font-weight: 500px;
     }
@@ -118,8 +120,8 @@ justify-content: space-between;
     
     .panel-1-info h1,.btn{
         font-size: small;
-
         font-weight: 400;
     }
+    
     
 }
