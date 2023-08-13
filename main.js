@@ -1,3 +1,5 @@
+
+
 let box=document.querySelector(".panel-2")
 
 
@@ -8,7 +10,7 @@ function fill(){
     
     let clutter="";
 for(let a=0;a<150;a++){
-    let num=rand(0,10);
+    let num=rand(-5,10);
     clutter+=`<div class="box"> ${num} </div>`;
     box.innerHTML=clutter;
 }
@@ -33,8 +35,7 @@ function box_loop(){
 
 document.querySelector(".btn").addEventListener("click",()=>{
     fill();
-    time=5
-    console.log("done")
+    time=20;
     intervals=setInterval(ticker,1000);
     score_card.textContent="0";
 box_loop();
